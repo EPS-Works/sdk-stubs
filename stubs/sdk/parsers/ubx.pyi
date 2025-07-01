@@ -45,6 +45,7 @@ class Format:
     R8: str
     CH: Callable[[int], str]
     PAD: Callable[[int], str]
+    ADAPTIVE: str
 
 class Field(NamedTuple):
     name: Incomplete
