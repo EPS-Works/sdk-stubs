@@ -1,3 +1,4 @@
+import types
 from typing import Protocol
 
 class Serial(Protocol):
@@ -127,4 +128,17 @@ class SerialBufferCursor:
         Args:
             data: The bytes to write to the serial port.
         """
-    def __del__(self) -> None: ...
+    def close(self) -> None:
+        """Explicitly close the cursor and remove it from the buffer.
+
+        This is the preferred way to clean up a cursor rather than
+        relying on garbage collection.
+        """
+    def __del__(self) -> None:
+        """Clean up cursor when garbage collected.
+
+        Defensive cleanup. It handles cases where the buffer
+        might be garbage collected before the cursor.
+        """
+    def __enter__(self) -> SerialBufferCursor: ...
+    def __exit__(self, exc_type: type[BaseException] | None, exc_val: BaseException | None, exc_tb: types.TracebackType | None) -> None: ...

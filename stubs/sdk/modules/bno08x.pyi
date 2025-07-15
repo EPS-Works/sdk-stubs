@@ -65,7 +65,7 @@ class BNO08x:
         """
     @property
     def stabilized_rotation(self) -> Quaternion | None:
-        """Get the current stabilized rotatio quaternion data.
+        """Get the current stabilized rotation quaternion data.
 
         Returns:
             A tuple of (w, x, y, z) quaternion values representing the stabilized rotation,

@@ -1,3 +1,5 @@
+import types
+
 class ClientConnectionError(OSError):
     """Exception raised when NTRIP caster connection fails."""
 

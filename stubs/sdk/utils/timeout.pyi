@@ -1,3 +1,5 @@
+import types
+
 class TimeoutError(Exception):
     """Exception raised when a timeout occurs."""
 

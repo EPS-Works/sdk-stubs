@@ -32,6 +32,8 @@ class BMI08x:
     def acceleration(self) -> list[float]:
         """Get the current acceleration data.
 
+        Reads accelerometer data from the BMI088 sensor (datasheet section 5.3.4).
+
         Returns:
             A list of [x, y, z] acceleration values in G units.
         """
@@ -39,12 +41,16 @@ class BMI08x:
     def angular_velocity(self) -> list[float]:
         """Get the current angular velocity data.
 
+        Reads gyroscope data from the BMI088 sensor (datasheet section 5.5.2).
+
         Returns:
             A list of [x, y, z] angular velocity values in rad/s.
         """
     @property
     def temperature(self) -> float | None:
         """Get the current temperature of the sensor.
+
+        Reads temperature data from the BMI088 sensor (datasheet section 5.3.7).
 
         Returns:
             The current temperature in degrees Celsius.

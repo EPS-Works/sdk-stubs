@@ -2,7 +2,7 @@ from typing import Callable
 
 ErrorHandler = Callable[[Exception, int], None]
 
-def retry(delay: int = 0, attempts: int | None = None, on_error: ErrorHandler | None = None) -> Callable:
+def retry(delay: int = 0, attempts: int = ..., on_error: ErrorHandler | None = None) -> Callable:
     """Create a retry decorator for function calls.
 
     This decorator wraps a function to automatically retry it when it fails.
@@ -12,8 +12,7 @@ def retry(delay: int = 0, attempts: int | None = None, on_error: ErrorHandler | 
 
     Args:
         delay: Milliseconds to wait between retry attempts (default: 0).
-        attempts: Optional maximum number of retry attempts before failing.
-            If None, retries indefinitely until success.
+        attempts: Maximum number of retry attempts before failing (default: 1000).
         on_error: Optional callback function to handle errors during retries.
             The callback receives the exception and current attempt count.
 
