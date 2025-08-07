@@ -113,3 +113,9 @@ class CANBus:
         Returns:
             A function that clears the filter when called.
         """
+    def attach(self, callback: Callable[[int, bool, bytes], None], fifo: int | None = 0) -> Callable[[], None]:
+        """Attach a callback function to the CAN bus for message reception.
+
+        Args:
+            callback: The callback function to attach to the CAN bus.
+        """
