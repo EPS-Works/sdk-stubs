@@ -1,5 +1,5 @@
+from ..utils.axes import Axes as Axes, Direction as Direction, ReferenceFrame as ReferenceFrame
 from machine import I2C as I2C
-from sdk.utils.axes import Axes as Axes, Direction as Direction, ReferenceFrame as ReferenceFrame
 from typing import Callable
 
 BMI08xSensor = tuple[int, tuple[int, int], tuple[int, int]]

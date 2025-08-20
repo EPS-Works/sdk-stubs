@@ -1,6 +1,6 @@
+from ..utils.enum import Enum as Enum
 from .parser import Parser as Parser
 from _typeshed import Incomplete
-from sdk.utils.enum import Enum as Enum
 from typing import Any, Callable, NamedTuple
 
 class Talker(Enum):

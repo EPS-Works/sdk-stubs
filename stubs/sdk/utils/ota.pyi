@@ -65,7 +65,7 @@ class OTA:
         Returns:
             The number of files that were successfully updated.
         """
-    def create(self, user: str, repo: str, token: str, root: str = '', salt: str = ''):
+    def create(self, user: str, repo: str, token: str, root: str = '', salt: str = '') -> None:
         '''Create and store an encoded .ota configuration file.
 
         This method generates a secure configuration file containing encoded

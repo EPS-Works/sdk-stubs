@@ -1,5 +1,5 @@
+from ..utils.axes import Axes as Axes, Direction as Direction, ReferenceFrame as ReferenceFrame
 from machine import I2C as I2C
-from sdk.utils.axes import Axes as Axes, Direction as Direction, ReferenceFrame as ReferenceFrame
 
 BNO08xSensor = tuple[int, int, int]
 Vector3 = tuple[float, float, float]

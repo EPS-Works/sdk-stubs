@@ -1,6 +1,6 @@
-from typing import Any, Callable
+from typing import Any, Callable, Generator
 
-def chunks(array: list, size: int, pad: Any = None):
+def chunks(array: list, size: int, pad: Any = None) -> Generator[list, None, None]:
     """Split a list into fixed-size chunks with optional padding.
 
     This utility function divides a list into chunks of a specified size, with

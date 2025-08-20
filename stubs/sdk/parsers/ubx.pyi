@@ -219,7 +219,7 @@ class UBX:
             byte sequence if the message format is not found.
         """
     @classmethod
-    def activate(cls, *names) -> None:
+    def activate(cls, *names: str) -> None:
         """Activate the UBX message with the given name.
 
         Args:

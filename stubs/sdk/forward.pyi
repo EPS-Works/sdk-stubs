@@ -15,7 +15,7 @@ class Forwarder:
             source: The source Serial interface to read data from.
             throttle: Optional throttle value in milliseconds to control data flow rate.
         """
-    def to(self, target: Serial | Callable[[bytes], None]):
+    def to(self, target: Serial | Callable[[bytes], None]) -> None:
         """Add a target for data forwarding.
 
         Args:

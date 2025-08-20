@@ -1,7 +1,7 @@
 import types
 from .parsers import Parser as Parser
 from .serial import Serial as Serial
-from typing import Any
+from typing import Any, Callable
 
 class Stream:
     """Serial data stream processor with parser support.
@@ -35,7 +35,7 @@ class Stream:
     def __enter__(self) -> Stream: ...
     def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
 
-def stream(parsers: list[type[Parser]] | None = None, raw: bool = False, throttle: int = 10, timeout: int | None = None, buffer_size: int = 256):
+def stream(parsers: list[type[Parser]] | None = None, raw: bool = False, throttle: int = 10, timeout: int | None = None, buffer_size: int = 256) -> Callable[[Callable[[Any, Serial], None]], Callable[[Serial], Any]]:
     """Create a message processor decorator for serial streams.
 
     This decorator transforms a function into an automatic message processor for

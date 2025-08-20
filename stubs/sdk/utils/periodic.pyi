@@ -1,6 +1,6 @@
-from typing import Any, Callable
+from typing import Awaitable, Callable
 
-def periodic(period: int, duration: int | None = None, times: int | None = None) -> Callable[[Callable[..., Any]], Callable[..., Any]]:
+def periodic(period: int, duration: int | None = None, times: int | None = None) -> Callable[[Callable[..., None]], Callable[..., Awaitable[None]]]:
     """Create a periodic task decorator.
 
     This decorator wraps a function to execute it at fixed intervals. It supports

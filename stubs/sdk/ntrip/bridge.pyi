@@ -1,7 +1,7 @@
+from ..parsers.nmea import NMEAParser as NMEAParser
+from ..serial import SerialBufferCursor as SerialBufferCursor
+from ..stream import Stream as Stream
 from .client import NTRIPClient as NTRIPClient
-from sdk.parsers.nmea import NMEAParser as NMEAParser
-from sdk.serial import SerialBufferCursor as SerialBufferCursor
-from sdk.stream import Stream as Stream
 
 class NTRIPBridge:
     """Manages bidirectional data flow between GNSS receiver and NTRIP caster.

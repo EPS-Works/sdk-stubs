@@ -1,8 +1,9 @@
-from typing import Callable
+from typing import Awaitable, Callable, TypeVar
 
+R = TypeVar('R')
 ErrorHandler = Callable[[Exception, int], None]
 
-def retry(delay: int = 0, attempts: int = ..., on_error: ErrorHandler | None = None) -> Callable:
+def retry(delay: int = 0, attempts: int = ..., on_error: ErrorHandler | None = None) -> Callable[[Callable[..., R]], Callable[..., R]]:
     """Create a retry decorator for function calls.
 
     This decorator wraps a function to automatically retry it when it fails.
@@ -24,7 +25,7 @@ def retry(delay: int = 0, attempts: int = ..., on_error: ErrorHandler | None = N
     Raises:
         ValueError: If delay is negative or attempts is non-positive.
     """
-def aretry(delay: int = 0, attempts: int = ..., on_error: ErrorHandler | None = None) -> Callable:
+def aretry(delay: int = 0, attempts: int = ..., on_error: ErrorHandler | None = None) -> Callable[[Callable[..., Awaitable[R]]], Callable[..., Awaitable[R]]]:
     """Create a retry decorator for async function calls.
 
     This decorator wraps an async function to automatically retry it when it fails.

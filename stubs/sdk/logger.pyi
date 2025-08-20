@@ -16,7 +16,7 @@ class ElapsedTimeFormatter(Formatter):
         Args:
             fmt: The format string for log messages.
         """
-    def formatTime(self, *_):
+    def formatTime(self, *_) -> float:
         """Format the current time as elapsed seconds since program start.
 
         Returns:
