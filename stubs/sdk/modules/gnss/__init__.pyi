@@ -8,5 +8,6 @@ __all__ = ['GNSS', 'Ublox', 'GNSSFactory', 'GNSS_MODULES']
 
 class GNSSModules(NamedTuple):
     ZED_F9P: Incomplete
+    UM98x: Incomplete
 
 GNSS_MODULES: Incomplete
