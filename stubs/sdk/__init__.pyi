@@ -17,6 +17,6 @@ from .sysinfo import __firmware__ as __firmware__, __platform__ as __platform__
 from .usb import UsbHub as UsbHub
 from .xbee import XBeeSocket as XBeeSocket
 
-__all__ = ['__version__', '__platform__', '__firmware__', 'AnalogIn', 'DifferentialAnalogIn', 'DigitalIO', 'Ethernet', 'Led', 'PWM', 'UsbHub', 'XBeeSocket', 'SerialBuffer', 'SerialBufferCursor', 'CANBus', 'BMI08x', 'BNO08x', 'FileSystem', 'FlashDrive', 'Storage', 'to_best_size', 'Stream', 'stream', 'Forwarder', 'logger', 'use_log_file', 'LogLevel', 'utils', 'parsers', 'filters', 'ntrip', 'modules']
+__all__ = ['__version__', '__platform__', '__firmware__', 'AnalogIn', 'DifferentialAnalogIn', 'DigitalIO', 'Led', 'PWM', 'UsbHub', 'XBeeSocket', 'SerialBuffer', 'SerialBufferCursor', 'BMI08x', 'BNO08x', 'Storage', 'to_best_size', 'Stream', 'stream', 'Forwarder', 'utils', 'parsers', 'filters', 'ntrip', 'modules', 'Ethernet', 'CANBus', 'FileSystem', 'FlashDrive', 'logger', 'use_log_file', 'LogLevel']
 
 __version__: str
