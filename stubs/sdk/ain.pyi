@@ -9,7 +9,7 @@ class AnalogIn:
         SAMPLE_SIZE: Number of samples to take for noise reduction (default: 500).
     """
     SAMPLE_SIZE: int
-    def __init__(self, pin: int | str, voltage_divider: float) -> None:
+    def __init__(self, pin: str, voltage_divider: float) -> None:
         """Initialize the AnalogIn instance.
 
         Args:

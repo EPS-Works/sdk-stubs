@@ -7,7 +7,7 @@ class Led(DigitalIO):
     and pattern generation. It ensures safe pin configuration and prevents mode changes
     that could damage the LED or circuit.
     """
-    def __init__(self, pin: int | str, inverted: bool = False) -> None:
+    def __init__(self, pin: str, inverted: bool = False) -> None:
         """Initialize an LED controller.
 
         Args:

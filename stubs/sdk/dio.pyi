@@ -19,7 +19,7 @@ class DigitalIO:
     RISING: int
     FALLING: int
     CHANGE: int
-    def __init__(self, pin: int | str, mode: int = ..., pull: int | None = None, inverted: bool = False, value: bool = False) -> None:
+    def __init__(self, pin: str, mode: int = ..., pull: int | None = None, inverted: bool = False, value: bool = False) -> None:
         """Initialize a digital I/O pin wrapper.
 
         Args:
