@@ -173,7 +173,7 @@ class NMEAParser(Parser):
     bytes from a data stream into complete NMEA sentences. It handles validation, buffering,
     and extraction of structured message data from valid sentences.
     """
-    def __init__(self, callback: Callable[[NMEA], None] = None) -> None: ...
+    def __init__(self, callback: Callable[[NMEA], None] | None = None) -> None: ...
     def reset(self) -> None:
         """Reset the parser state.
 
