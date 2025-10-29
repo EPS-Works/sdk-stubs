@@ -249,7 +249,7 @@ class UBXParser(Parser):
     bytes from a data stream into complete UBX sentences. It handles validation, buffering,
     and extraction of structured message data from valid sentences.
     """
-    def __init__(self) -> None:
+    def __init__(self, callback: Callable[[UBX], None] = None) -> None:
         """Initialize the UBXParser instance.
 
         This constructor initializes the parser by resetting its internal state.
