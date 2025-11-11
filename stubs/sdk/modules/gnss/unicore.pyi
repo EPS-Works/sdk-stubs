@@ -1,5 +1,5 @@
 from sdk.modules.gnss import GNSS as GNSS
-from sdk.parsers.nmea import MESSAGES as MESSAGES
+from sdk.parsers.nmea.nmea import MESSAGES as MESSAGES
 from typing import Callable
 
 class Unicore(GNSS):

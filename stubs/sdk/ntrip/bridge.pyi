@@ -1,4 +1,4 @@
-from ..parsers.nmea import NMEAParser as NMEAParser
+from ..parsers.nmea import Parser as Parser
 from ..serial import SerialBufferCursor as SerialBufferCursor
 from ..stream import Stream as Stream
 from .client import NTRIPClient as NTRIPClient

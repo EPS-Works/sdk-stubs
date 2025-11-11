@@ -1,4 +1,4 @@
-from ...parsers.ubx import Format as Format, UBX as UBX, UBXParser as UBXParser
+from ...parsers.ubx import Format as Format, Parser as Parser, UBX as UBX
 from ...stream import Stream as Stream
 from ...utils import retry as retry
 from .gnss import GNSS as GNSS

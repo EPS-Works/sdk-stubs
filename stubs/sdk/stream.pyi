@@ -1,5 +1,5 @@
 import types
-from .parsers import Parser as Parser
+from .parsers.parser import Parser as Parser
 from .serial import Serial as Serial
 from typing import Any, Callable
 
