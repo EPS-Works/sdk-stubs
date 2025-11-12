@@ -39,7 +39,7 @@ class Ublox(GNSS):
         Raises:
             OSError: If a command cannot be applied to the receiver.
         """
-    def config(self, data: list[tuple[int, tuple[int, str]]], layer: int = 1) -> None:
+    def config(self, data: list[tuple[int, tuple[int, str]]], layer: int = 1, timeout: int | None = None) -> None:
         """Configure the GNSS receiver using UBX-CFG-VALSET messages.
 
         This method sends configuration data to the receiver and waits for acknowledgment.
@@ -47,9 +47,10 @@ class Ublox(GNSS):
         Args:
             data: List of tuples containing (Key ID, value) pairs to configure.
             layer: The configuration layer to modify (default: RAM).
+            timeout: Maximum time to wait for acknowledgment in milliseconds.
 
         Raises:
             OSError: If the configuration cannot be applied or acknowledgment is not received.
         """
-    def stream(self, messages, port, frequency: int | None = 1) -> Callable[[Any], None]: ...
+    def stream(self, messages, port, frequency: int | None = 1, timeout: int | None = None) -> Callable[[Any], None]: ...
     def halt(self, messages, port) -> None: ...

@@ -58,7 +58,7 @@ class GNSS:
         This method deactivates the GNSS receiver by setting the power pin low if available.
         It includes a delay to ensure proper shutdown.
         """
-    def stream(self, messages: list[str], port: int | str, frequency: int | None = None) -> Callable[[], None]:
+    def stream(self, messages: list[str], port: int | str, frequency: int | None = None, timeout: int | None = None) -> Callable[[], None]:
         """Start streaming GNSS messages.
 
         This method configures the GNSS receiver to stream specified messages to a port
@@ -68,6 +68,7 @@ class GNSS:
             messages: List of message types to stream.
             port: The port to stream messages to.
             frequency: Optional frequency in Hz for message streaming.
+            timeout: Optional timeout in milliseconds for configuration acknowledgment.
 
         Returns:
             A callable that can be used to stop the streaming.
