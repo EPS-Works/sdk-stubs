@@ -85,3 +85,15 @@ class NMEA:
         Raises:
             ValueError: If a message with the same name is already registered.
         '''
+    @classmethod
+    def duplicate(cls, name: str, seed: str) -> None:
+        """Duplicate an existing NMEA message type.
+
+        Args:
+            name: The new message identifier.
+            seed: The message identifier to duplicate.
+
+        Raises:
+            ValueError: If a message with the same name is already registered
+                or the seed is not registered.
+        """
