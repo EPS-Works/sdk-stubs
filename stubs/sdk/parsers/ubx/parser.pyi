@@ -38,13 +38,3 @@ class Parser(_Parser):
             otherwise None.
         """
     def parse(self, data: bytes) -> UBX: ...
-    def find(self, data: bytes) -> tuple[bytes | None, int | None]:
-        """Find the first UBX message in the given data.
-
-        Args:
-            data: The data to search for a UBX message.
-
-        Returns:
-            A tuple containing the first UBX message found in the data and the position of
-            the message in the data, or both None if no message is found.
-        """

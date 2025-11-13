@@ -16,15 +16,6 @@ class Parser:
         Returns:
             The complete message as bytes if found, otherwise None.
         """
-    def find(self, data: bytes) -> tuple[bytes | None, int | None]:
-        """Find the protocol delimiter in a byte stream.
-
-        Args:
-            data: Raw byte stream to search.
-
-        Returns:
-            A tuple containing the data and its position in the stream, or both None if not found
-        """
     def parse(self, data: bytes) -> Any:
         """Parse binary data into a structured object.
 
@@ -36,3 +27,12 @@ class Parser:
         """
     def reset(self) -> None:
         """Reset the parser state."""
+    def find(self, data: bytes) -> list[bytes]:
+        """Find a complete message in a byte sequence.
+
+        Args:
+            data: The data to search for a complete message.
+
+        Returns:
+            A list of complete messages found in the data.
+        """

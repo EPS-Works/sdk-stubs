@@ -41,15 +41,3 @@ class Parser(_Parser):
         Returns:
             A structured NMEA object.
         """
-    def find(self, data: bytes) -> tuple[None | bytes, int | None]:
-        """Find a complete NMEA message in a byte sequence.
-
-        Args:
-            data: The data to search for a complete NMEA message.
-
-        Returns:
-            A tuple containing the found NMEA message as bytes if found, None
-            otherwise, and the position of the message in the data if found,
-            None otherwise. The position is the index of the first byte of the
-            message.
-        """
