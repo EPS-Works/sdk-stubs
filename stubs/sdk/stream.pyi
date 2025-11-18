@@ -11,7 +11,7 @@ class Stream:
     The class can be used as a context manager for automatic resource cleanup and as
     an iterator for convenient message processing.
     """
-    def __init__(self, serial: Serial, parsers: list[Parser] | None = None, raw: bool = False, throttle: int = 10, timeout: int | None = None, buffer_size: int = 256) -> None:
+    def __init__(self, serial: Serial, parsers: list[Parser] | None = None, raw: bool = False, throttle: int = 10, timeout: int | None = None, buffer_size: int = 256, on_error: Callable[[Exception], None] | None = None) -> None:
         """Initialize a serial data stream processor.
 
         Args:
